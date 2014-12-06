@@ -1,10 +1,10 @@
 name:                site
 version:             0.1.0.0
 synopsis:            Static site for reiddraper.cm
-homepage:            http://reiddraper.com
+homepage:            http://jmct.cc
 license:             AllRightsReserved
-author:              Reid Draper
-maintainer:          reiddraper@gmail.com
+author:              José Manuel Calderón Trilla
+maintainer:          jmct@jmct.cc
 category:            Web
 build-type:          Simple
 cabal-version:       >=1.8
