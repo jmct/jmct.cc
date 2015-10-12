@@ -177,5 +177,5 @@ So, using the definition of fmap on DSLfs we get:
 > interpIO (Free (GetChar k1 k2)) = do 
 >                             ch <- getChar
 >                             interpIO $ either k1 k2 $ if ch == '\EOT'
->                                                       then Left "Poop"
+>                                                       then Left "Error"
 >                                                       else Right ch
