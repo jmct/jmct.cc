@@ -157,7 +157,7 @@ feedConfiguration = FeedConfiguration
     , feedDescription   = "JMCT on functional programming"
     , feedAuthorName    = "JMCT"
     , feedAuthorEmail   = "jmct@jmct.cc"
-    , feedRoot          = "jmct.cc"
+    , feedRoot          = "http://jmct.cc"
     }
 
 atom :: Rules ()
