@@ -3,10 +3,20 @@
 Bio
 ===
 
-I am a final year PhD student in the Programming Languages group at the 
+I have just finished my [PhD thesis](http://jmct.cc/thesis.html). I conducted
+the research as a member of the Programming Languages group at the 
 [University of York Computer Science Department](http://www.cs.york.ac.uk).
 My research focuses on parallelism in Functional Programming languages.
 I have particular interest in implicit parallelism and static analysis.
+
+At some point they'll ask me to
+[defend](https://www.vitae.ac.uk/doing-research/doing-a-doctorate/completing-your-doctorate/your-viva)
+the thesis and (hopefully) make some
+[corrections](https://www.vitae.ac.uk/doing-research/doing-a-doctorate/completing-your-doctorate/your-viva/thesis-outcomes),
+but until then I'm not technically finished!
+
+I now work at [Galois](http://www.galois.com) as part of their Washington DC
+office.
 
 
 Prior Education
