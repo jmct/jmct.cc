@@ -3,24 +3,21 @@
 Bio
 ===
 
+I am a Research Scientist at [Galois, Inc.](https://www.galois.com)
+working mostly on Quantitative Information Flow and Abstract Interpretation.
+
 I have just finished my [PhD thesis](http://jmct.cc/thesis.html). I conducted
 the research as a member of the Programming Languages group at the 
 [University of York Computer Science Department](http://www.cs.york.ac.uk).
-My research focuses on parallelism in Functional Programming languages.
-I have particular interest in implicit parallelism and static analysis.
+My thesis focused on parallelism in Functional Programming languages using
+the combination of static analysis and runtime profiling.
 
-At some point they'll ask me to
-[defend](https://www.vitae.ac.uk/doing-research/doing-a-doctorate/completing-your-doctorate/your-viva)
-the thesis and (hopefully) make some
-[corrections](https://www.vitae.ac.uk/doing-research/doing-a-doctorate/completing-your-doctorate/your-viva/thesis-outcomes),
-but until then I'm not technically finished!
+My research interests are in parallel functional languages, DSLs, computer music
+(particularly the representation and manipulation of structures representing
+rhythm), and compilers.
 
-I now work at [Galois](http://www.galois.com) as part of their Washington DC
-office.
-
-
-Prior Education
-===============
+Education
+=========
 
 Before starting my PhD I attained two MSc degrees (also from York):
 
