@@ -10,9 +10,11 @@ main :: IO ()
 main = hakyll $ do
     index
     about
+    burge
     posts
     memos
     archivePosts
+    archiveBurge
     archiveMemos
     templates
     images
@@ -74,12 +76,33 @@ posts = match "posts/*" $ do
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
 
+burge :: Rules ()
+burge = match "burge/*" $ do
+            route $ composeRoutes (composeRoutes (gsubRoute "burge/" (const "")) (gsubRoute ".md" (const "/index.md"))) (setExtension "html")
+            compile $ pandocMathCompiler
+                >>= loadAndApplyTemplate "templates/post.html" postCtx
+                >>= saveSnapshot "postContent"
+                >>= loadAndApplyTemplate "templates/default.html" defaultContext
+                >>= relativizeUrls
+
 archivePosts :: Rules ()
 archivePosts = create ["posts.html"] $ do
             route idRoute
             compile $ do
                 posts <- recentFirst =<< loadAll "posts/*"
                 let ctx = constField "title" "Posts" <>
+                            listField "posts" postCtx (return posts) <>
+                            defaultContext
+                makeItem ""
+                    >>= loadAndApplyTemplate "templates/posts.html" ctx
+                    >>= loadAndApplyTemplate "templates/default.html" ctx
+                    >>= relativizeUrls
+archiveBurge :: Rules ()
+archiveBurge = create ["burge.html"] $ do
+            route idRoute
+            compile $ do
+                posts <- chronological =<< loadAll "burge/*"
+                let ctx = constField "title" "Burge School of Functional Programming" <>
                             listField "posts" postCtx (return posts) <>
                             defaultContext
                 makeItem ""
@@ -105,8 +128,10 @@ index = create ["index.html"] $ do
             route idRoute
             compile $ do
                 blogPosts <- recentFirst =<< loadAll "posts/*"
+                burgePosts <- recentFirst =<< loadAll "burge/*"
                 memoPosts <- recentFirst =<< loadAll "memos/*"
                 let indexContext = listField "posts" postCtx (return blogPosts) `mappend`
+                                   listField "burge" postCtx (return burgePosts) `mappend`
                                    listField "memos" postCtx (return memoPosts) `mappend`
                                    defaultContext
                 makeItem "" >>= loadAndApplyTemplate "templates/index.html" indexContext

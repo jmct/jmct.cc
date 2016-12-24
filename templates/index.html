@@ -1,7 +1,7 @@
 <h1>Home</h1>
 
 <p>
-  Hello, I am a final year PhD student at the <a href="https://www.cs.york.ac.uk">University of York</a>. My main interests are
+  Hello, I work at <a href="https://www.galois.com">Galois</a>. My main interests are
 (in no particular order): Parallelism, Functional Languages, and Bread Making.
 </p>
 
@@ -11,8 +11,22 @@
 
 <!-- I list my very small catalogue of publications <a href="/publications.html">here.</a> -->
 
-
 <h1><a href="/posts.html">Posts:</a> </h1>
+
+<p><a href="/burge.html">Burge School of Functional Programming:</a></p>
+
+<ul class="burge">
+  $for(burge)$
+    <li>
+      <span class="post_date">
+        $date$
+      </span>
+      <a href="$url$">$title$</a>
+    </li>
+  $endfor$
+</ul>
+
+<p>Posts about Functional Programming:</p>
 
 <ul class="posts">
   $for(posts)$
@@ -27,7 +41,7 @@
 
 <h1><a href="/memos.html">Memos:</a> </h1>
 
-<p>Informal communications that may have wider interest.</p>
+<p>Informal communications that may have wider interest:</p>
 
 <ul class="memos">
   $for(memos)$
