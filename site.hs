@@ -20,6 +20,7 @@ main = hakyll $ do
     images
     css
     atom
+    atomBurge
 
 -- Utility functions
 ------------------------------------------------------------------------------
@@ -63,7 +64,6 @@ memos = match "memos/*" $ do
             route $ composeRoutes (composeRoutes (gsubRoute "memos/" (const "")) (gsubRoute ".md" (const "/index.md"))) (setExtension "html")
             compile $ pandocMathCompiler
                 >>= loadAndApplyTemplate "templates/post.html" postCtx
-                >>= saveSnapshot "memoContent"
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
 
@@ -72,7 +72,7 @@ posts = match "posts/*" $ do
             route $ composeRoutes (composeRoutes (gsubRoute "posts/" (const "")) (gsubRoute ".md" (const "/index.md"))) (setExtension "html")
             compile $ pandocMathCompiler
                 >>= loadAndApplyTemplate "templates/post.html" postCtx
-                >>= saveSnapshot "postContent"
+                >>= saveSnapshot "burgeContent"
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
 
@@ -81,7 +81,7 @@ burge = match "burge/*" $ do
             route $ composeRoutes (composeRoutes (gsubRoute "burge/" (const "")) (gsubRoute ".md" (const "/index.md"))) (setExtension "html")
             compile $ pandocMathCompiler
                 >>= loadAndApplyTemplate "templates/post.html" postCtx
-                >>= saveSnapshot "postContent"
+                >>= saveSnapshot "burgeContent"
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
 
@@ -92,6 +92,7 @@ archivePosts = create ["posts.html"] $ do
                 posts <- recentFirst =<< loadAll "posts/*"
                 let ctx = constField "title" "Posts" <>
                             listField "posts" postCtx (return posts) <>
+                            constField "feed" "atom.xml" <>
                             defaultContext
                 makeItem ""
                     >>= loadAndApplyTemplate "templates/posts.html" ctx
@@ -104,6 +105,7 @@ archiveBurge = create ["burge.html"] $ do
                 posts <- chronological =<< loadAll "burge/*"
                 let ctx = constField "title" "Burge School of Functional Programming" <>
                             listField "posts" postCtx (return posts) <>
+                            constField "feed" "burge.xml" <>
                             defaultContext
                 makeItem ""
                     >>= loadAndApplyTemplate "templates/posts.html" ctx
@@ -117,6 +119,7 @@ archiveMemos = create ["memos.html"] $ do
                 posts <- recentFirst =<< loadAll "memos/*"
                 let ctx = constField "title" "Memos" <>
                             listField "posts" postCtx (return posts) <>
+                            constField "feed" "atom.xml" <>
                             defaultContext
                 makeItem ""
                     >>= loadAndApplyTemplate "templates/posts.html" ctx
@@ -176,10 +179,10 @@ postCtx =
     dateField "date" "%b %e, %Y" `mappend`
     defaultContext
 
-feedConfiguration :: FeedConfiguration
-feedConfiguration = FeedConfiguration
-    { feedTitle         = "JMCT: FP"
-    , feedDescription   = "JMCT on functional programming"
+feedConfiguration :: String -> FeedConfiguration
+feedConfiguration title = FeedConfiguration
+    { feedTitle         = title
+    , feedDescription   = ""
     , feedAuthorName    = "JMCT"
     , feedAuthorEmail   = "jmct@jmct.cc"
     , feedRoot          = "http://jmct.cc"
@@ -190,6 +193,19 @@ atom = create ["atom.xml"] $ do
            route idRoute
            compile $ do
                let feedCtx = postCtx `mappend` bodyField "description"
+               blogs <- loadAllSnapshots "posts/*" "burgeContent"
+               burges <- loadAllSnapshots "burge/*" "burgeContent"
+               blogPosts <- fmap (take 10) $ recentFirst $ blogs ++ burges
+               renderAtom (feedConfiguration "JMCT on Functional Programming")
+                    feedCtx blogPosts
+
+atomBurge :: Rules ()
+atomBurge = create ["burge.xml"] $ do
+           route idRoute
+           compile $ do
+               let feedCtx = postCtx `mappend` bodyField "description"
                blogPosts <- fmap (take 10) . recentFirst =<<
-                   loadAllSnapshots "posts/*" "postContent"
-               renderAtom feedConfiguration feedCtx blogPosts
+                   loadAllSnapshots "burge/*" "burgeContent"
+               renderAtom
+                    (feedConfiguration "Burge School of Functional Programming")
+                    feedCtx blogPosts
