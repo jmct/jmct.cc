@@ -11,7 +11,7 @@ School of Functional Programming". When I originally
 [tweeted](https://twitter.com/josecalderon/status/804154036375187458) that I was
 going to do this, I called it the "Burge-Runciman" School, but upon further
 reflection I think that they are distinct and I was being clouded by the fact
-that it was [Runciman](https://www-users.cs.york.ac.uk/colin/) who taught me
+that it was [Colin Runciman](https://www-users.cs.york.ac.uk/colin/) who taught me
 about Burge.
 
 Motivation
@@ -39,12 +39,12 @@ Background
 ----------
 
 When I was a PhD student at York, I remember reading a paper about parser
-combinators in Haskell. I went into Colin's office and expressed my joy, and in
-particular I expressed something like "it's amazing that they were able to come
-up with something like that!". This was early days of my PhD when I still wasn't
-so great at identifying what's _actually_ novel in a paper. Colin told me to
-wait a minute and he went to his bookshelf and grabbed an old book: "Recursive
-Programming Techniques" by William H. Burge. He suggested I read it.
+combinators in Haskell. I went into Colin Runciman's office and expressed my
+joy, and in particular I expressed something like "it's amazing that they were
+able to come up with something like that!". This was early days of my PhD when I
+still wasn't so great at identifying what's _actually_ novel in a paper. Colin
+told me to wait a minute and he went to his bookshelf and grabbed an old book:
+"Recursive Programming Techniques" by William H. Burge. He suggested I read it.
 
 The book was first published in 1975, three years before Backus' famous Turing
 award lecture ["Can programming be liberated from the von Neumann
