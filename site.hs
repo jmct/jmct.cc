@@ -11,6 +11,7 @@ main = hakyll $ do
     index
     about
     burge
+    dev
     posts
     memos
     archivePosts
@@ -79,6 +80,15 @@ posts = match "posts/*" $ do
 burge :: Rules ()
 burge = match "burge/*" $ do
             route $ composeRoutes (composeRoutes (gsubRoute "burge/" (const "")) (gsubRoute ".md" (const "/index.md"))) (setExtension "html")
+            compile $ pandocMathCompiler
+                >>= loadAndApplyTemplate "templates/post.html" postCtx
+                >>= saveSnapshot "burgeContent"
+                >>= loadAndApplyTemplate "templates/default.html" defaultContext
+                >>= relativizeUrls
+
+dev :: Rules ()
+dev = match "dev/*" $ do
+            route $ composeRoutes (composeRoutes (gsubRoute "dev/" (const "")) (gsubRoute ".md" (const "/index.md"))) (setExtension "html")
             compile $ pandocMathCompiler
                 >>= loadAndApplyTemplate "templates/post.html" postCtx
                 >>= saveSnapshot "burgeContent"
