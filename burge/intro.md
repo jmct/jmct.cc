@@ -109,7 +109,7 @@ Series" and its charter was
 > techniques that would have lasting value throughout the industry.
 
 IBM was trying to combat the tendency for systems programmers to all continually
-reinvent the wheel. In other words, this was not a series for the naval gazers
+reinvent the wheel. In other words, this was not a series for the navel gazers
 in the Ivory Tower, this was for those on the ground programming real systems
 and solving 'real world' problems. Granted, the programming tasks of the day
 weren't necessarily the same tasks that a programmer today might be focusing on,
