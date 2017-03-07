@@ -6,13 +6,13 @@ published: 2016-12-23 00:00:00
 Preface
 =======
 
-This is the first in a series of posts about what I am calling the "Burge
-School of Functional Programming". When I originally
+This is the first in a [series of posts](http://jmct.cc/burge.html) about what I
+am calling the "Burge School of Functional Programming". When I originally
 [tweeted](https://twitter.com/josecalderon/status/804154036375187458) that I was
 going to do this, I called it the "Burge-Runciman" School, but upon further
 reflection I think that they are distinct and I was being clouded by the fact
-that it was [Colin Runciman](https://www-users.cs.york.ac.uk/colin/) who taught me
-about Burge.
+that it was [Colin Runciman](https://www-users.cs.york.ac.uk/colin/) who taught
+me about Burge.
 
 Motivation
 ----------
