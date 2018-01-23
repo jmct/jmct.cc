@@ -10,10 +10,10 @@ main :: IO ()
 main = hakyll $ do
     index
     about
-    burge
-    dev
-    posts
-    memos
+    postsOn "burge/"
+    postsOn "dev/"
+    postsOn "posts/"
+    postsOn "memos/"
     archivePosts
     archiveBurge
     archiveMemos
@@ -60,40 +60,14 @@ about = match "about.markdown" $ do
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= (return . removeIndexFromUrls)
 
-memos :: Rules ()
-memos = match "memos/*" $ do
-            route $ composeRoutes (composeRoutes (gsubRoute "memos/" (const "")) (gsubRoute ".md" (const "/index.md"))) (setExtension "html")
-            compile $ pandocMathCompiler
-                >>= loadAndApplyTemplate "templates/post.html" postCtx
-                >>= loadAndApplyTemplate "templates/default.html" defaultContext
-                >>= relativizeUrls
-
-posts :: Rules ()
-posts = match "posts/*" $ do
-            route $ composeRoutes (composeRoutes (gsubRoute "posts/" (const "")) (gsubRoute ".md" (const "/index.md"))) (setExtension "html")
-            compile $ pandocMathCompiler
-                >>= loadAndApplyTemplate "templates/post.html" postCtx
-                >>= saveSnapshot "burgeContent"
-                >>= loadAndApplyTemplate "templates/default.html" defaultContext
-                >>= relativizeUrls
-
-burge :: Rules ()
-burge = match "burge/*" $ do
-            route $ composeRoutes (composeRoutes (gsubRoute "burge/" (const "")) (gsubRoute ".md" (const "/index.md"))) (setExtension "html")
-            compile $ pandocMathCompiler
-                >>= loadAndApplyTemplate "templates/post.html" postCtx
-                >>= saveSnapshot "burgeContent"
-                >>= loadAndApplyTemplate "templates/default.html" defaultContext
-                >>= relativizeUrls
-
-dev :: Rules ()
-dev = match "dev/*" $ do
-            route $ composeRoutes (composeRoutes (gsubRoute "dev/" (const "")) (gsubRoute ".md" (const "/index.md"))) (setExtension "html")
-            compile $ pandocMathCompiler
-                >>= loadAndApplyTemplate "templates/post.html" postCtx
-                >>= saveSnapshot "burgeContent"
-                >>= loadAndApplyTemplate "templates/default.html" defaultContext
-                >>= relativizeUrls
+postsOn :: String -> Rules ()
+postsOn dir = match (fromGlob (dir ++ "*")) $ do
+                route $ composeRoutes (composeRoutes (gsubRoute dir (const "")) (gsubRoute ".md" (const "/index.md"))) (setExtension "html")
+                compile $ pandocMathCompiler
+                    >>= loadAndApplyTemplate "templates/post.html" postCtx
+                    >>= saveSnapshot "burgeContent"
+                    >>= loadAndApplyTemplate "templates/default.html" defaultContext
+                    >>= relativizeUrls
 
 archivePosts :: Rules ()
 archivePosts = create ["posts.html"] $ do
