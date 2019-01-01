@@ -38,7 +38,7 @@ pandocMathCompiler = pandocCompilerWith defaultHakyllReaderOptions writerOpts
                      , Ext_latex_macros
                      ]
     defaultExt     = writerExtensions defaultHakyllWriterOptions
-    newExtensions  = foldr S.insert defaultExt mathExtensions
+    newExtensions  = foldr enableExtension defaultExt mathExtensions
     writerOpts     = defaultHakyllWriterOptions {
                         writerExtensions = newExtensions, 
                         writerHTMLMathMethod = MathJax ""
