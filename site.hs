@@ -3,7 +3,6 @@
 import Data.Monoid (mappend)
 import Data.String.Utils (replace)
 import Hakyll
-import qualified Data.Set as S
 import Text.Pandoc.Options
 
 main :: IO ()
@@ -23,15 +22,10 @@ main = hakyll $ do
     atom
     atomBurge
 
--- Utility functions
-------------------------------------------------------------------------------
-
-(<>) = mappend
-
-
 -- Use pandoc options to get typeset Mathematics
 ------------------------------------------------------------------------------
 
+pandocMathCompiler :: Compiler (Item String)
 pandocMathCompiler = pandocCompilerWith defaultHakyllReaderOptions writerOpts
   where
     mathExtensions = [ Ext_tex_math_dollars, Ext_tex_math_double_backslash
