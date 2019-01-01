@@ -56,7 +56,7 @@ about = match "about.markdown" $ do
 
 postsOn :: String -> Rules ()
 postsOn dir = match (fromGlob (dir ++ "*")) $ do
-                route $ composeRoutes (composeRoutes (gsubRoute dir (const "")) (gsubRoute ".md" (const "/index.md"))) (setExtension "html")
+                route (setExtension "html")
                 compile $ pandocMathCompiler
                     >>= loadAndApplyTemplate "templates/post.html" postCtx
                     >>= saveSnapshot "burgeContent"
