@@ -1,4 +1,4 @@
-![Me in 2010](/images/jmct.jpg "A Picture of me in 2022")
+![Me in 2022](/images/jmct.jpg "A Picture of me in 2022"){ width=250px }
 
 Bio
 ===
