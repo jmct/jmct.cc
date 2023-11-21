@@ -1,20 +1,22 @@
-![Me in 2010](/images/me2010.jpg "A Picture of me in 2010")
+![Me in 2010](/images/jmct.jpg "A Picture of me in 2022")
 
 Bio
 ===
 
-I am a Research Scientist at [Galois, Inc.](https://www.galois.com)
-working mostly on Quantitative Information Flow and Abstract Interpretation.
+I am currently the Executive Director of the [Haskell
+Foundation](https://haskell.foundation) and finishing up a Lecturship at the
+[University of Maryland](https://cs.umd.edu).  Previously I was a Research
+Scientist at [Galois, Inc.](https://www.galois.com) working mostly on
+Quantitative Information Flow and Abstract Interpretation.
 
-I have just finished my [PhD thesis](http://jmct.cc/thesis.html). I conducted
-the research as a member of the Programming Languages group at the 
-[University of York Computer Science Department](http://www.cs.york.ac.uk).
-My thesis focused on parallelism in Functional Programming languages using
-the combination of static analysis and runtime profiling.
+I completed my [PhD](http://jmct.cc/thesis.html) as a member of the Programming
+Languages group at the [University of York Computer Science
+Department](http://www.cs.york.ac.uk).  My thesis focused on parallelism in
+Functional Programming languages using the combination of static analysis and
+runtime profiling.
 
-My research interests are in parallel functional languages, DSLs, computer music
-(particularly the representation and manipulation of structures representing
-rhythm), and compilers.
+My research interests are in parallel functional languages, DSLs, computer
+music, and compilers.
 
 Education
 =========
