@@ -67,7 +67,7 @@ My co-pilot and I spent some time looking up the airport; its runway lengths, it
 
 Dispatch was trying to get supplies to where they were needed, they used this whiteboard to keep track of who needed what:
 
-![Request for specific items at different airports](/images/opairdrop/dispatch-requests.jpeg "Status of Specific Requests at different places"){ width=500px }
+![Request for specific items at different airports](/images/opairdrop/dispatch-site-requests.jpeg "Status of Specific Requests at different places"){ width=500px }
 
 You can kinda tell from the photo above which areas were further along in their recovery.
 Because communications were often cut off (depended on the area), a lot of this information was relayed by the pilots returning from supply runs.
@@ -117,7 +117,7 @@ That said, it was gratifying to be able to help, even if it was a small help.
 I have immense respect for those working ATC and folks doing supply runs over multiple days.
 
 
-![They gave me a hat](/images/opairdrop/airport-conditions.jpeg "Operation Airdrop Hat"){ width=500px }
+![They gave me a hat](/images/opairdrop/hat.jpeg "Operation Airdrop Hat"){ width=500px }
 
 
 [^1]: I have since filed a NASA ASRS report about the incident to help prevent similar incidences in the future.
