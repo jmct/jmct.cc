@@ -1,6 +1,6 @@
 ---
 title: My Experience With Operation Airdrop
-published: 2024-10-04 00:00:00
+published: 2024-10-06 00:00:00
 ---
 
 Introduction and Context
@@ -53,14 +53,14 @@ ATC was overwhelmingly accommodating.
 Every step of the way they were helping aircraft get to where they needed to go. 
 When I got to the airspace near the relief effort it was busier than any airspace I have ever flown in.
 
-The organization I'm work with has a supply hub, near Charlotte, that had been spared the worst of the storm but was still near enough to the Appalachians to fly supplies in where they are needed.
+The organization I'm working with has a supply hub, near Charlotte, that had been spared the worst of the storm but was still near enough to the Appalachians to fly supplies in where they are needed.
 By this stage of the relief efforts things were fairly well-oiled.
 
 I land at the supply hub, they only asked three bits of information:
 
 * My tail number
 * the type of aircraft
-* How much cargo capacity (weight) I can take
+* How much cargo (weight) I can take
 
 Because the aircraft I fly is able to land in tighter spots, the dispatcher (person figuring out who should go where) asked whether I was comfortable going to an airport that was a bit trickier, and had therefore received fewer supply runs.
 My co-pilot and I spent some time looking up the airport; its runway lengths, its elevation, and determined that while tricky we were comfortable with the mission.
@@ -82,14 +82,15 @@ Volunteers had pre-weighed pallets of supplies.
 Depending on where you were going and how much you could carry, you'd pick a pallet to be loaded into the aircraft.
 Volunteers helped at each stage of this process, including loading the cargo.
 
-**At no point did anyone from the FAA get in the way of this process (a claim being made online).**
+**At no point did anyone from the FAA or FEMA get in the way of this process (a claim being made online).**
 
 Supply Run
 ----------
 
 The tower at the supply hub was so wildly busy and they were working magic.
 They did a fantastic job of getting everyone off the ground in a timely manner.
-One aircraft was waiting on an IFR clearance, and they had taxi through the grass in order to depart earlier since I was flying VFR.
+As one aircraft was waiting on an IFR clearance, and they had me taxi through the grass in order to depart earlier since I was flying VFR.
+Not really the behavior of someone trying to prevent people from helping.
 
 On the way to my destination ATC was great again.
 The approach and landing went as briefed, we had to descend into a valley, which is always a bit spooky as it means there is terrain higher than you as you come in for a landing, leaving you with fewer options if things go poorly.
@@ -101,7 +102,7 @@ On the way back to the supply hub I had a very close call with another aircraft[
 Normally ATC would have given me a heads up, but they were so swamped.
 Weather was getting worse too, which caused congestion of VFR aircraft since we all had to find visual paths around clouds and holes through layers for descent.
 
-Unfortunately the weather prevent further supply runs to that area.
+Unfortunately the weather prevented further supply runs to that area.
 Luckily (though I did not know this at the time), the roads opened up to that area later that day, which is great news.
 
 The issues on the ground are that the infrastructure has been destroyed, communication is difficult, and the environment is changing all the time: some roads reopen, which shifts where aircraft are actually needed, etc.
