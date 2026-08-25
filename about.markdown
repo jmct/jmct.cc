@@ -3,11 +3,13 @@
 Bio
 ===
 
-I am currently the Executive Director of the [Haskell
-Foundation](https://haskell.foundation) and finishing up a Lecturship at the
-[University of Maryland](https://cs.umd.edu).  Previously I was a Research
-Scientist at [Galois, Inc.](https://www.galois.com) working mostly on
-Quantitative Information Flow and Abstract Interpretation.
+I am currently a software correctness and assurance consultant, helping
+organizations navigate the use of high-assurance software development and formal
+methods.  Previously I worked as the Executive Director of the [Haskell
+Foundation](https://haskell.foundation), a Lecturer at the [University of
+Maryland](https://cs.umd.edu) and a Research Scientist at [Galois,
+Inc.](https://www.galois.com) working mostly on Quantitative Information Flow
+and Abstract Interpretation.
 
 I completed my [PhD](http://jmct.cc/thesis.html) as a member of the Programming
 Languages group at the [University of York Computer Science
@@ -21,7 +23,7 @@ music, and compilers.
 Education
 =========
 
-Before starting my PhD I attained two MSc degrees (also from York):
+Before my PhD I attained two MSc degrees (also from York):
 
 * MSc in Information Technology (2010)
     * Dissertation: Graph Programs for NP-Complete Problems
